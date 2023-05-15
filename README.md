@@ -1,9 +1,36 @@
-NicePlanet
-==========
+<img src="./public/imgs/logo.png" />
 
-Desafio de simular a criação de uma API que possibilita à indústria cadastrar os produtores e as propriedades de sua carteira de clientes para serem monitoradas pela Niceplanet
+## Teste para desenvolvedor Back-end
 
-#### Rotas do sistema
+Projeto desenvolvido para um desafio da niceplanet objetivo de realizar o desafio de simular a criação de uma API que possibilita à indústria cadastrar os produtores e as propriedades de sua carteira de clientes para serem monitoradas pela Niceplanet.
+
+><b>ESPECIFICAÇÕES TÉCNICAS: </b> Node JS, Mysql <br>
+> utilizando as bibliotecas node: express, jsonwebtoken, mysql2 e sequelize.
+
+## Executando o projeto
+
+>Para fazer o clone do projeto utilize o comando no terminal: <br>git clone https://github.com/stefanluks/Niceplanet-Backend.git
+
+### 1º `cd Niceplanet-Backend`
+
+Executando o comando para acessar a pasta do projeto.
+
+### 2º `npm install`
+
+Para instalar todas as bibliotecas do JS necessarios para o projeto, e em seguida execute.
+
+### 3º `npm start`
+
+Irá executar o projeto em modo de desenvolvimento.\
+Que pode ser testado no navegador no endereço: [http://localhost:8080](http://localhost:8080)
+
+A página recarrega a cada alteração nos arquivos.\
+E os erros podem serem visualizados no console.
+
+<br>
+
+
+## Rotas do sistema
 
 /login **POST**
 ---------------
