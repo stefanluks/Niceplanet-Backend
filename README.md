@@ -24,8 +24,6 @@ Para instalar todas as bibliotecas do JS necessarios para o projeto, e em seguid
 Irá executar o projeto em modo de desenvolvimento.\
 Que pode ser testado no navegador no endereço: [http://localhost:8080](http://localhost:8080)
 
-A página recarrega a cada alteração nos arquivos.\
-E os erros podem serem visualizados no console.
 
 <br>
 
