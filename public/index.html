@@ -128,6 +128,47 @@
               <div id="flush-collapseFourt" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                 <div class="accordion-body">
                     <div class="w-100 my-2 bg bg-dark text-white p-3 rounded">http://localhost:8080/Get/{idProdutor-idPropriedade}</div>
+                    Nesta rota um usuário autenticado pode fazer uma requisição do tipo <b>GET</b> no bando de dados atráves da API. É possível buscar por um produtor e/ou propriedade pelos seus id's.<br>
+                    Para isso o usuário deve passar como parâmentro esses ids separados por um um hifén, Por exemplo:
+                    <div class="w-100 my-2 bg bg-dark text-white p-3 rounded">
+                        <p class="text-warning">buscando por um produtor</p>
+                        <div class="w-100 my-2 bg bg-primary text-light p-3 rounded">http://localhost:8080/Get/<b class="text-dark">22</b></div>
+                        O sistema deve retornar um json com os dados do produtor caso exista no banco de dados.</p>
+                        {<br>
+                            <text class="text-success" style="margin-left: 25px;">"idProdutor":</text><text class="text-warning">22,</text><br>
+                            <text class="text-success" style="margin-left: 25px;">"nomeProdutor":</text><text class="text-warning">"Stefan Lucas",</text><br>
+                            <text class="text-success" style="margin-left: 25px;">"cpfProdutor":</text><text class="text-warning">"03851345177"</text><br>
+                        }
+                    </div>
+                    E para buscar apenas uma propriedade é possível adicionando um hifén antes do id, por exemplo:
+                    <div class="w-100 my-2 bg bg-dark text-white p-3 rounded">
+                      <p class="text-warning">buscando por uma propriedade</p>
+                      <div class="w-100 my-2 bg bg-primary text-light p-3 rounded">http://localhost:8080/Get/<b class="text-dark">-4</b></div>
+                      O sistema deve retornar um json com os dados do propriedade caso exista no banco de dados.</p>
+                      {<br>
+                          <text class="text-success" style="margin-left: 25px;">"idPropriedade":</text><text class="text-warning">4,</text><br>
+                          <text class="text-success" style="margin-left: 25px;">"nomePropriedade":</text><text class="text-warning">"Terra dos sonhos",</text><br>
+                          <text class="text-success" style="margin-left: 25px;">"cadastroRural":</text><text class="text-warning">"01XX4563222472345"</text><br>
+                      }
+                  </div>
+                  E para buscar ambos deve ser seguir a ordem de idProdutor seguido de hifén e por fim o idPropriedade.
+                  <div class="w-100 my-2 bg bg-dark text-white p-3 rounded">
+                    <p class="text-warning">buscando por um produtor e uma propriedade</p>
+                    <div class="w-100 my-2 bg bg-primary text-light p-3 rounded">http://localhost:8080/Get/<b class="text-dark">22-4</b></div>
+                    O sistema deve retornar um json com os dados do produtor e da propriedade caso existam no banco de dados.</p>
+                    {<br>
+                      <text class="text-danger" style="margin-left: 15px;">"produtor"</text>:{<br>
+                        <text class="text-success" style="margin-left: 25px;">"idProdutor":</text><text class="text-warning">22,</text><br>
+                        <text class="text-success" style="margin-left: 25px;">"nomeProdutor":</text><text class="text-warning">"Stefan Lucas",</text><br>
+                        <text class="text-success" style="margin-left: 25px;">"cpfProdutor":</text><text class="text-warning">"03851345177"</text><br>
+                      },<br>
+                        <text class="text-danger" style="margin-left: 15px;">"propriedade"</text>:{<br>
+                        <text class="text-success" style="margin-left: 25px;">"idPropriedade":</text><text class="text-warning">4,</text><br>
+                        <text class="text-success" style="margin-left: 25px;">"nomePropriedade":</text><text class="text-warning">"Terra dos sonhos",</text><br>
+                        <text class="text-success" style="margin-left: 25px;">"cadastroRural":</text><text class="text-warning">"01XX4563222472345"</text><br>
+                    }<br>
+                }
+                </div>
                 </div>
               </div>
             </div>

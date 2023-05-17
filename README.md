@@ -140,3 +140,65 @@ Sendo possivel tambem o cadastro apenas da propriedade passando apenas os dados 
 -------------------------------------
 
 http://localhost:8080/Get/{idProdutor-idPropriedade}
+
+Nesta rota um usuário autenticado pode fazer uma requisição do tipo **GET** no bando de dados atráves da API. É possível buscar por um produtor e/ou propriedade pelos seus id's.  
+Para isso o usuário deve passar como parâmentro esses ids separados por um um hifén, Por exemplo:
+
+---
+
+## buscando por um Produtor
+
+``http://localhost:8080/Get/22``
+
+O sistema deve retornar um json com os dados do produtor caso exista no banco de dados.
+
+```json 
+    {  
+        "idProdutor":22,  
+        "nomeProdutor":"Stefan Lucas",  
+        "cpfProdutor":"03851345177"  
+    }
+```
+
+E para buscar apenas uma propriedade é possível adicionando um hifén antes do id, por exemplo:
+
+---
+
+## buscando por uma Propriedade
+
+``http://localhost:8080/Get/-4``
+
+O sistema deve retornar um json com os dados do propriedade caso exista no banco de dados.
+
+```json
+{  
+    "idPropriedade":4,  
+    "nomePropriedade":"Terra dos sonhos",  
+    "cadastroRural":"01XX4563222472345"  
+}
+```
+
+E para buscar ambos deve ser seguir a ordem de idProdutor seguido de hifén e por fim o idPropriedade.
+
+---
+
+## buscando por um produtor e uma propriedade
+
+``http://localhost:8080/Get/22-4``
+
+O sistema deve retornar um json com os dados do produtor e da propriedade caso existam no banco de dados.
+
+```json
+{  
+    "produtor":{  
+        "idProdutor":22,  
+        "nomeProdutor":"Stefan Lucas",  
+        "cpfProdutor":"03851345177"  
+    },
+    "propriedade":{  
+        "idPropriedade":4,  
+        "nomePropriedade":"Terra dos sonhos",  
+        "cadastroRural":"01XX4563222472345"  
+    }
+}
+```
